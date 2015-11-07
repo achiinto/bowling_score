@@ -1,31 +1,6 @@
 # BowlingScore
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'bowling_score'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install bowling_score
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/bowling_score/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+TODO: This gem supports score calculation for a bowling game given a string of comma separated representation
+of integer. The scoring rule is based on http://bowling.about.com/od/rulesofthegame/a/bowlingscoring.htm and 
+https://en.wikipedia.org/wiki/Ten-pin_bowling#Scoring. The calculation consider the rules for strike and spare
+rewarding. 
