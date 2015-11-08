@@ -1,4 +1,5 @@
 require 'bowling_score/version'
+require 'bowling_score/score_calculator'
 
 # Bowling Score module defines constants needed fr Bowling Score calculation
 module BowlingScore
