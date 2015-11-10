@@ -8,12 +8,14 @@ module BowlingScore
     end
 
     def calculate
+      @current_frame = 0
       _calculate_from_frame(0)
     end
 
     private
 
     def _calculate_from_frame(index)
+      @current_frame += 1
       return 0 if _out_of_range?(index)
       return _rewarded_frame(index) unless _without_bonus?(index)
       _unrewarded_frame(index)
@@ -31,7 +33,7 @@ module BowlingScore
 
     def _out_of_range?(index)
       return true unless @scores[index]
-      index >= BowlingScore::NUMBER_OF_FRAME
+      @current_frame > BowlingScore::NUMBER_OF_FRAME
     end
 
     def _rewarded_frame(index)

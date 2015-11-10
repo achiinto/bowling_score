@@ -107,6 +107,30 @@ describe BowlingScore::ScoreCalculator do
       end
     end
 
+    context 'with 1,2,3,4,5,5' do
+      it 'returns 20' do
+        test_array = [1, 2, 3, 4, 5, 5]
+        subject.instance_variable_set(:@scores, test_array)
+        expect(subject.calculate).to eq(20)
+      end
+    end
+
+    context 'with 9,1,10,8,0,2' do
+      it 'returns 48' do
+        test_array = [9, 1, 10, 8, 0, 2]
+        subject.instance_variable_set(:@scores, test_array)
+        expect(subject.calculate).to eq(48)
+      end
+    end
+
+    context 'with 10,0,0,9,1,0,0,8,2,0,0,7,3,0,0,6,4,0,0' do
+      it 'returns 50' do
+        test_array = [10, 0, 0, 9, 1, 0, 0, 8, 2, 0, 0, 7, 3, 0, 0, 6, 4, 0, 0]
+        subject.instance_variable_set(:@scores, test_array)
+        expect(subject.calculate).to eq(50)
+      end
+    end
+
     context 'with a single strike' do
       context 'as the last score' do
         it 'returns sum of all scores' do
